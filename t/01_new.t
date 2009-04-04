@@ -4,12 +4,12 @@ use Test::More tests => 5;
 use Grid::Transform;
 
 my $g = eval { Grid::Transform->new };
-ok(not defined $g, 'new()');
+ok(! defined $g, 'new()');
 
 my @array = ('a' .. 'z');
 
 $g = eval { Grid::Transform->new(\@array) };
-ok(not defined $g, 'new(\@array)');
+ok(! defined $g, 'new(\@array)');
 
 $g = Grid::Transform->new(\@array, rows=>5);
 isa_ok($g, 'Grid::Transform', 'new(\@array, rows=>5');
