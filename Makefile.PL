@@ -9,11 +9,13 @@ WriteMakefile(
     VERSION_FROM  => 'lib/Grid/Transform.pm',
     ABSTRACT_FROM => 'lib/Grid/Transform.pm',
     PREREQ_PM     => { 'Test::More' => 0 },
-    (eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (META_MERGE => {
-        resources => {
-            Repository => 'http://github.com/gray/grid-transform'
+    (eval { ExtUtils::MakeMaker->VERSION(6.46) } ? (
+        META_MERGE => {
+            resources => {
+                repository => 'http://github.com/gray/grid-transform',
+            }
         }
-    }) : () ),
+    ) : () ),
     dist          => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean         => { FILES => 'Grid-Transform-*' },
 );
