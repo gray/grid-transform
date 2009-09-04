@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 our $VERSION = '0.07';
+$VERSION = eval $VERSION;
 
 eval {
     require XSLoader;
@@ -216,7 +217,7 @@ complex data structures.
 =head1 REQUESTS AND BUGS
 
 Please report any bugs or feature requests to
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Grid-Transform>. I will be
+L<http://rt.cpan.org/Public/Bug/Report.html?Queue=Grid-Transform>. I will be
 notified, and then you'll automatically be notified of progress on your bug as
 I make changes.
 
@@ -241,6 +242,10 @@ You can also look for information at:
 
 =over
 
+=item * GitHub Source Repository
+
+L<http://github.com/gray/grid-transform>
+
 =item * AnnoCPAN: Annotated CPAN documentation
 
 L<http://annocpan.org/dist/Grid-Transform>
@@ -251,7 +256,7 @@ L<http://cpanratings.perl.org/d/Grid-Transform>
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Grid-Transform>
+L<http://rt.cpan.org/Public/Dist/Display.html?Name=Grid-Transform>
 
 =item * Search CPAN
 
@@ -261,7 +266,7 @@ L<http://search.cpan.org/dist/Grid-Transform>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2007 gray <gray at cpan.org>, all rights reserved.
+Copyright (C) 2006-2009 gray <gray at cpan.org>, all rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
