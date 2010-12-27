@@ -1,4 +1,3 @@
-.perlcriticrc
 Changes
 lib/Grid/Transform.pm
 Makefile.PL
@@ -24,6 +23,11 @@ t/15_fold_right.t
 Transform.xs
 typemap
 xt/kwalitee.t
+xt/leaktrace.t
 xt/perlcritic.t
+xt/perlcriticrc
 xt/pod.t
 xt/pod_coverage.t
+xt/portability_filenames.t
+xt/valgrind.t
+xt/vars.t
