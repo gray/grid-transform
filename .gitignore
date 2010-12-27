@@ -1,0 +1,9 @@
+Grid-Transform-*
+MANIFEST.bak
+Makefile
+Makefile.old
+Transform.bs
+Transform.c
+Transform.o
+blib/
+pm_to_blib
