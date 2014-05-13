@@ -24,17 +24,17 @@ typedef grid_t *Grid__Transform;
     if ((g)->dirty) {                                                          \
         IV len = av_len((g)->grid);                                            \
         IV add = (g)->rows * (g)->columns - len - 1;                           \
-        av_extend((g)->grid, len + add);                                       \
         AvFILLp((g)->grid) += add;                                             \
         if (add > 0) {                                                         \
             IV i;                                                              \
+            av_extend((g)->grid, len + add);                                   \
             /* Find position after last extra element. */                      \
             /* TODO: binary search? */                                         \
-            for (i=len+1; i<=AvFILLp((g)->grid); i++) {                        \
-                if (AvARRAY((g)->grid)[i] == &PL_sv_undef) break;              \
+            for (i=0; i<add; i++) {                                            \
+                if (! av_exists((g)->grid, len + 1 + i)) break;                \
             }                                                                  \
-            for (; i<=AvFILLp((g)->grid); i++) {                               \
-                AvARRAY((g)->grid)[i] =  newSVpvn("", 0);                      \
+            for (; i<add; i++) {                                               \
+                AvARRAY((g)->grid)[len + 1 + i] = newSVpvn("", 0);             \
             }                                                                  \
         }                                                                      \
        (g)->dirty = 0;                                                         \
@@ -138,6 +138,7 @@ CODE:
     copy->grid = av_make(av_len(self->grid)+1, AvARRAY(self->grid));
     copy->rows = self->rows;
     copy->columns = self->columns;
+    copy->dirty = self->dirty;
     RETVAL = copy;
 OUTPUT:
     RETVAL
