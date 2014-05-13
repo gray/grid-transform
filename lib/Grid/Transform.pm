@@ -5,7 +5,7 @@ use warnings;
 
 use XSLoader;
 
-our $VERSION    = '0.07';
+our $VERSION    = '0.08';
 our $XS_VERSION = $VERSION;
 $VERSION = eval $VERSION;
 

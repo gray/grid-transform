@@ -1,5 +1,11 @@
 Revision history for Grid-Transform
 
+0.08  Tue May 13 20:18:29 UTC 2014
+    - Fixed for perl >= 5.19.4. Arrays no longer use &PL_sv_undef to
+      represent unused slots.
+    - Fixed memory leak. Grid resizing is now destructive to extra elements.
+    - Updated ppport.h.
+
 0.07  Mon Sep 24 12:34:35 CDT 2007
     - Updated ppport.h.
     - Used warnings in tests.
