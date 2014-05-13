@@ -262,7 +262,7 @@ L<http://search.cpan.org/dist/Grid-Transform>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2009 gray <gray at cpan.org>, all rights reserved.
+Copyright (C) 2006-2014 gray <gray at cpan.org>, all rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
