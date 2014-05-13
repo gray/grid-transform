@@ -3,11 +3,12 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 my %conf = (
-    NAME          => 'Grid::Transform',
-    AUTHOR        => 'gray <gray@cpan.org>',
-    LICENSE       => 'perl',
-    VERSION_FROM  => 'lib/Grid/Transform.pm',
-    ABSTRACT_FROM => 'lib/Grid/Transform.pm',
+    NAME           => 'Grid::Transform',
+    AUTHOR         => 'gray <gray@cpan.org>',
+    LICENSE        => 'perl',
+    VERSION_FROM   => 'lib/Grid/Transform.pm',
+    ABSTRACT_FROM  => 'lib/Grid/Transform.pm',
+    PREREQ_PM      => { XSLoader => 0, },
     BUILD_REQUIRES => { 'Test::More' => 0.82, },
     META_MERGE     => {
         resources => {

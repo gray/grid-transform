@@ -17,6 +17,7 @@ DEPENDENCIES
 This module requires these other modules and libraries:
 
     Test::More
+    XSLoader
 
 A C compiler is required to build this module.
 

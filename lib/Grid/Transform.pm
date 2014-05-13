@@ -3,17 +3,13 @@ package Grid::Transform;
 use strict;
 use warnings;
 
-our $VERSION = '0.07';
+use XSLoader;
+
+our $VERSION    = '0.07';
+our $XS_VERSION = $VERSION;
 $VERSION = eval $VERSION;
 
-eval {
-    require XSLoader;
-    XSLoader::load(__PACKAGE__, $VERSION);
-    1;
-} or do {
-    require DynaLoader;
-    DynaLoader::bootstrap(__PACKAGE__, $VERSION);
-};
+XSLoader::load(__PACKAGE__, $XS_VERSION);
 
 1;
 
