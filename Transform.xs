@@ -108,7 +108,7 @@ CODE:
     self->grid = newAV();
     /* add may be negative, so ensure it does't decrease the size of the
        original array. */
-    av_fill(self->grid, len + MAX(add, 0));
+    av_fill(self->grid, len + (add > 0 ? add : 0));
 
     /* Copy original array. */
     for (i=0; i<=len; i++) {
